@@ -1,4 +1,4 @@
-package TutorServlet;
+package Controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

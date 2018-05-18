@@ -14,7 +14,7 @@ public class ConnectionManagerJDBCImpl implements ConnectionManager{
         return connectionManager;
     }
 
-    private ConnectionManagerJDBCImpl(){
+    public ConnectionManagerJDBCImpl(){
 
     }
 
