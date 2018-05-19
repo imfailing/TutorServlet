@@ -5,14 +5,6 @@
          version="4.0">
     <display-name>TutorServlet</display-name>
     <servlet>
-        <servlet-name>Tutor</servlet-name>
-        <servlet-class>Controller.Tutor</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Tutor</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
-    <servlet>
         <servlet-name>LoginController</servlet-name>
         <servlet-class>Controller.LoginController</servlet-class>
     </servlet>

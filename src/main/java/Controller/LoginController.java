@@ -27,7 +27,6 @@ public class LoginController extends HttpServlet {
             req.getSession().setAttribute("role", Role);
             if (Role == 1) {
                 resp.sendRedirect("/teacherdashboard");
-
             } else {
                 resp.sendRedirect("/dashboard");
             }

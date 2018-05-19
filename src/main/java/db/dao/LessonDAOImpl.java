@@ -20,12 +20,14 @@ public class LessonDAOImpl implements LessonDAO {
     @Override
     public Lesson getLessonById(int id) throws SQLException {
         Connection connection = connectionManager.getConnection();
+        UserDaoImpl userDao = new UserDaoImpl();
         PreparedStatement statement = connection.prepareStatement("SELECT * " +
                 "FROM Lessons WHERE id = ?");
         statement.setInt(1, id);
         ResultSet resultSet = statement.executeQuery();
-        Lesson lesson = null;
-
+        Lesson lesson = new Lesson(resultSet.getInt("id"), userDao.getAllbyLesson(resultSet.getInt("id")) ,
+                resultSet.getString("login"), resultSet.getDate("datestart"),
+                resultSet.getDate("dateend"), resultSet.getString("name"));
         connection.close();
         return lesson;
     }
