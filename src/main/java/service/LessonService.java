@@ -6,6 +6,7 @@ import pojo.Lesson;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 public class LessonService {
     private static LessonDAO userDao = new LessonDAOImpl();
@@ -20,5 +21,14 @@ public class LessonService {
         return null;
     }
 
+    public Map<String, Integer> getGrades(int lesson) {
+        try {
+            LessonDAO lessonDAO = new LessonDAOImpl();
+            return lessonDAO.getGrades(lesson);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 }
