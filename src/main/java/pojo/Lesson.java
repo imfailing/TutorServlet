@@ -6,19 +6,19 @@ import java.util.Date;
 public class Lesson {
     private int id;
     private ArrayList<User> listOfStudents;
-    private User teacher;
+    private String teacher;
     private Date dateStart;
     private Date dateEnd;
-    private int type;
+    private String name;
 
 
-    public Lesson(int id, ArrayList<User> listOfStudents, User teacher, Date dateStart, Date dateEnd, int type) {
+    public Lesson(int id, ArrayList<User> listOfStudents, String teacher, Date dateStart, Date dateEnd, String name) {
         this.id = id;
         this.listOfStudents = listOfStudents;
         this.teacher = teacher;
         this.dateStart = dateStart;
         this.dateEnd = dateEnd;
-        this.type = type;
+        this.name = name;
     }
 
     public int getId() {
@@ -29,7 +29,7 @@ public class Lesson {
         return listOfStudents;
     }
 
-    public User getTeacher() {
+    public String getTeacher() {
         return teacher;
     }
 
@@ -41,8 +41,8 @@ public class Lesson {
         return dateEnd;
     }
 
-    public int getType() {
-        return type;
+    public String getName() {
+        return name;
     }
 
     public void setId(int id) {
@@ -53,7 +53,7 @@ public class Lesson {
         this.listOfStudents = listOfStudents;
     }
 
-    public void setTeacher(User teacher) {
+    public void setTeacher(String teacher) {
         this.teacher = teacher;
     }
 
@@ -65,7 +65,7 @@ public class Lesson {
         this.dateEnd = dateEnd;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public void setName(String name) {
+        this.name = name;
     }
 }

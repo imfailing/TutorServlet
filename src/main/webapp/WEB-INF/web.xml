@@ -30,9 +30,18 @@
     <url-pattern>/dashboard</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>TeacherDashboardController</servlet-name>
+        <servlet-class>Controller.TeacherDashboardController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TeacherDashboardController</servlet-name>
+        <url-pattern>/teacherdashboard</url-pattern>
+    </servlet-mapping>
+
     <filter>
         <filter-name>auth-filter</filter-name>
-        <filter-class>Controller.filter.AuthFilter</filter-class>
+        <filter-class>Controller.filter.StudentFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>auth-filter</filter-name>

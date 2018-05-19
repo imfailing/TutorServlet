@@ -5,12 +5,22 @@ public class User {
     private String user;
     private String password;
     private int type;
+    private int grade;
 
-    public User(int id, String user, String password, int type) {
+    public int getGrade() {
+        return grade;
+    }
+
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
+
+    public User(int id, String user, String password, int type, int grade) {
         this.id = id;
         this.user = user;
         this.password = password;
         this.type = type;
+        this.type = grade;
     }
 
 

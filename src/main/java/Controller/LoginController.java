@@ -21,11 +21,17 @@ public class LoginController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("userName");
         String password = req.getParameter("userPassword");
-        if(userService.checkAuth(login,password))
-        {
-            req.getSession().setAttribute("login",login);
-            resp.sendRedirect("/dashboard");
-        } else
+        if(userService.checkAuth(login,password)) {
+            Integer Role = userService.getRole(login);
+            req.getSession().setAttribute("login", login);
+            req.getSession().setAttribute("role", Role);
+            if (Role == 1) {
+                resp.sendRedirect("/teacherdashboard");
+
+            } else {
+                resp.sendRedirect("/dashboard");
+            }
+        }
         {
             resp.sendRedirect("/login?errorMsg=authError");
         }

@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Рабочая область студента</title>
+    <title>Рабочая область учителя</title>
 </head>
 <body>
 
